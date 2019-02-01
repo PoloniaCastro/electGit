@@ -36,7 +36,7 @@ include_once 'conexion/conexion.php';
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-            <li><a href=".html">Inicio</a></li>
+            <li><a href="">Inicio</a></li>
             <li><a href="registroUsuario.php">Registro</a></li>
             <li><a href="companies.html">Companies</a></li>
             <li class="dropdown">
@@ -63,7 +63,7 @@ include_once 'conexion/conexion.php';
           <input type="password" class="form-control input-lg" name="txtContrasenia" placeholder="Contraseña">
           <label><a href="">¿Olvidaste tu contraseña?</a></label>
           <button type="submit" class="btn btn-primary">Ingresar</button>
-          <p>No tienes una cuenta <a href="">Regístrate</a></p>
+          <p>No tienes una cuenta <a href="registroUsuario.php">Regístrate</a></p>
         </form>
       </div>
     </div>

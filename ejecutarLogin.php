@@ -2,7 +2,7 @@
 include_once 'conexion/conexion.php';
 
 $correo = $_POST["txtCorreo"];
-$contrasenia = $_POST["txtContrasenia"];
+$contrasenia = md5($_POST["txtContrasenia"]);
 
 $consulta = "SELECT * FROM usuario where correo_usu = '$correo' and contrasenia_usu = '$contrasenia'";
 $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
@@ -16,7 +16,7 @@ if($fila = mysqli_fetch_array( $resultado ))
 else
 {
   echo "<script>
-             alert('contraseña o correo incorrectos');
+             alert('contraseña o correo incorrectos $contrasenia');
              window.location= 'login.php'
  </script>";
 }

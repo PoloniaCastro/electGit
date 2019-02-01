@@ -58,7 +58,7 @@ include_once 'conexion/conexion.php';
 		<section class="inner-banner" style="backend:#242c36 url(https://via.placeholder.com/1920x600)no-repeat;">
 			<div class="container">
 				<div class="caption">
-					<h2>Consigue tus trabajos</h2>
+					<h2>Deja tu anuncio</h2>
 					<p>Busca Busca <span>Registro</span></p>
 				</div>
 			</div>
@@ -73,13 +73,15 @@ include_once 'conexion/conexion.php';
               <section class="login-wrapper">
                 <div class="container">
                   <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
-                    <form class="form" method="POST" action="ejecutarRegistroUsuario.php" >
-                      <img class="img-responsive" alt="logo" src="img/logo.png">
-                      <h2>Regístrate</h2>
-                      <input type="txt" class="form-control input-lg"  name="txtNombre" required  placeholder="Nombre"/>
-                      <input type="txt" class="form-control" name="txtApellido" required  placeholder="Apellido"/>
+                    <form class="form" method="POST" action="ejecutarRegistroAnuncio.php" >
+
+                      <h2>Deja tu anuncio</h2>
+                      <input type="txt" class="form-control input-lg"  name="txtTitulo" required  placeholder="Título"/>
+                      <textarea name="txtDescripcion" class="form-control input-lg" rows="10" cols="40" placeholder="Escriba el detalle de su anuncio"></textarea>
+                      <h2>Para contactarte</h2>
+                      <input type="txt" class="form-control" name="txtNombre" required  placeholder="Nombre"/>
                       <input type="txt" class="form-control" name="txtDireccion" required  placeholder="Dirección"/>
-                      <input type="mail" class="form-control" name="txtCorreo" required  placeholder="Correo (Ej: correo@algo.com)"/>
+                      <input type="mail" class="form-control" name="txtCorreo" required  placeholder="Correo ej: correo@algo.com"/>
                       <input  class="form-control" name="txtTelefono" required  placeholder="Teléfono Ej: 9 12345678"/>
                       <select class="form-control" name="selectReg">
                         <?
@@ -103,11 +105,10 @@ include_once 'conexion/conexion.php';
 
                             }
 
-                          ?>
+                          ?></select>
 
-                      <input type="password" class="form-control" name="txtContrasenia" required  placeholder="Contraseña"/>
 
-                      <button type="submit" class="btn btn-primary">Registrar</button>
+                      <button type="submit" class="btn btn-primary">Publicar</button>
 
 
                     </form>

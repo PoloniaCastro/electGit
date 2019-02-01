@@ -2,12 +2,12 @@
 <html class="no-js" lang="en">
 <?php
 include_once 'conexion/conexion.php';
-session_start();
+//session_start();
 ?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Electrico Desk | Portal Template</title>
+    <title>Eléctrico Desk | Portal Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -38,11 +38,11 @@ session_start();
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="registroUsuario">Regístrate</a></li>
             <li><a href="companies.html">Companies</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?echo $_SESSION['nombreUsu'] ;?></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">algo</a>
               <ul class="dropdown-menu animated fadeOutUp" style="display: none; opacity: 1;">
                 <li class="active"><a href="logout.php">Salir</a></li>
                 <li><a href="company-detail.html">Job Detail</a></li>
@@ -59,7 +59,7 @@ session_start();
   <section class="main-banner" style="background:#242c36 url(img/slider-01.jpg) no-repeat">
     <div class="container">
       <div class="caption">
-        <h2>Build Your Career</h2>
+        <h2>Publica tu trabajo</h2>
         <form>
           <fieldset>
             <div class="col-md-4 col-sm-4 no-pad">

@@ -6,8 +6,7 @@ $apellidoUsu = $_POST["txtApellido"];
 $direccionUsu = $_POST["txtDireccion"];
 $correoUsu = $_POST["txtCorreo"];
 $telefonoUsu = $_POST["txtTelefono"];
-$contrasenia = $_POST["txtContrasenia"];
-$pass = sha1($contrasenia);
+$contrasenia = md5($_POST["txtContrasenia"]);
 $ciudadUsu = $_POST["selectCiu"];
 $regionUsu = $_POST["selectReg"];
 
@@ -18,7 +17,7 @@ $scan = $fila[0];
 if($scan ==0)
 {
   $consultaInsert = "INSERT INTO usuario (nombre_usu, apellido_usu, direccion, correo_usu, telefono_usu, contrasenia_usu)
-  VALUES ('".$nombreUsu."', '".$apellidoUsu."', '".$direccionUsu."', '".$correoUsu."', '".$telefonoUsu."', '".$pass."')";
+  VALUES ('".$nombreUsu."', '".$apellidoUsu."', '".$direccionUsu."', '".$correoUsu."', '".$telefonoUsu."', '".$contrasenia."')";
   $resultado = mysqli_query( $conexion, $consultaInsert ) or die ( "Algo ha ido mal en la 2º consulta a la base de datos");
 
   $consulta2 = "SELECT id_usu FROM usuario order by id_usu desc limit 0,1";
@@ -29,7 +28,7 @@ if($scan ==0)
     $resultado3 = mysqli_query( $conexion, $consulta3 ) or die ( "Algo ha ido mal en la 4º consulta a la base de datos");
     if($resultado3)
       {
-        header
+        echo "hola";
 
       }
   }//fin while
