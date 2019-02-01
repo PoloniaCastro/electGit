@@ -1,83 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <?php
 include_once 'conexion/conexion.php';
 ?>
+<html class="no-js" lang="en">
+
 <head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Electrico Desk | Responsive Job Portal Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- All Plugin Css -->
+<link rel="stylesheet" href="css/plugins.css">
+
+<!-- Style & Common Css -->
+<link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
-          <!-- DataTables Example -->
-          <div class="card mb-3">
-            <div class="card-header">
-              <i class="fas fa-table"></i>
-              Ingresa a tu cuenta</div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <!-- form -->
-                <form class="form" method="POST" action=".php">
-                  <table  style="margin: 0 auto;">
-                    <tr>
-            <td>&nbsp;</td>
+  <!-- Navigation Start  -->
+  <nav class="navbar navbar-default navbar-sticky bootsnav">
 
-                    </tr>
-                    <tr>
-                      <td>correo</td>
-                      <td><input type="mail" class="form-control" name="txtCorreo" required  placeholder="Correo"/></td>
-                    <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-            <td>&nbsp;</td>
+    <div class="container">
+      <!-- Start Header Navigation -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="logo" alt=""></a>
+      </div>
+      <!-- End Header Navigation -->
 
-                    </tr>
-                    <tr>
-                      <td>Contraseña</td>
-                      <td><input type="password" class="form-control" name="txtContrasenia" required  placeholder="Contraseña"/></td>
-                    <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-            <td>&nbsp;</td>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+            <li><a href=".html">Inicio</a></li>
+            <li><a href="registroUsuario.php">Registro</a></li>
+            <li><a href="companies.html">Companies</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse</a>
+              <ul class="dropdown-menu animated fadeOutUp" style="display: none; opacity: 1;">
+                <li class="active"><a href="browse-job.html">Browse Jobs</a></li>
+                <li><a href="company-detail.html">Job Detail</a></li>
+                <li><a href="resume.html">Resume Detail</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+  <!-- Navigation End  -->
 
-                    </tr>
+  <!-- login section start -->
+  <section class="login-wrapper">
+    <div class="container">
+      <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+        <form class="form" method="POST" action="ejecutarLogin.php" >
+          <img class="img-responsive" alt="logo" src="img/logo.png">
+          <input type="mail" class="form-control input-lg"  name="txtCorreo" placeholder="Correo">
+          <input type="password" class="form-control input-lg" name="txtContrasenia" placeholder="Contraseña">
+          <label><a href="">¿Olvidaste tu contraseña?</a></label>
+          <button type="submit" class="btn btn-primary">Ingresar</button>
+          <p>No tienes una cuenta <a href="">Regístrate</a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- login section End -->
 
+  <!-- footer start -->
+  <footer>
 
+    <div class="copy-right">
+     <p>&copy;Copyright 2019 Grupo Macer </p>
+    </div>
+  </footer>
 
-
-                  <tr>
-          <td>&nbsp;</td>
-
-                  </tr>
-
-
-
-
-
-
-                    <tr>
-            <td>&nbsp;</td>
-
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td><div>
-                        <button type="submit" class="btn btn-primary btn-lg">Ingresar</button>
-                      </div></td>
-                      <th></th>
-                    </tr>
-                  </table>
-                </form>
-              </div>
-            </div>
-          <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>-->
-          </div>
-
-        </div>
-        <!-- /.container-fluid -->
-
-
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script src="js/bootsnav.js"></script>
+  <script src="js/main.js"></script>
   </body>
 
 </html>

@@ -29,10 +29,7 @@ if($scan ==0)
     $resultado3 = mysqli_query( $conexion, $consulta3 ) or die ( "Algo ha ido mal en la 4º consulta a la base de datos");
     if($resultado3)
       {
-        echo "<script>
-           alert('Registro exitoso);
-           window.location= 'menu.php'
-          </script>";
+        header
 
       }
   }//fin while
